@@ -15,6 +15,6 @@ output "sample1" {
 
 ##sometimes if variable/any reference with the combination of some other string then we have to access those in ${}
 
-output "sample" {
+output "sample-ext" {
   value = "${var.sample}"
 }
