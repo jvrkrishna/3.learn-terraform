@@ -22,6 +22,28 @@ output "course_list" {
   value = var.course_list
 }
 
+####### Map Type (input) ########
+variable "course_map" {
+  default = {
+    Devops = {
+      name = "devops"
+      Timing = "10am"
+      Duration = 90
+    }
+    AWS = {
+      name = "AWS"
+      timing = "7am"
+      Duration = 30
+
+    }
+  }
+}
+
+######## Output #########
+output "course_map" {
+  value = var.course_map
+}
+
 
 
 
