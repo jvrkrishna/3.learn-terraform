@@ -44,6 +44,19 @@ output "course_map" {
   value = var.course_map   #### use this to filter only one details   value = var.course_map[“Devops”]
 }
 
+############################################################
+variable "env" {}
+
+output "env" {
+  value = var.env
+}
+
+############################
+variable "url" {}
+
+output "url" {
+  value = var.url
+}
 
 
 
