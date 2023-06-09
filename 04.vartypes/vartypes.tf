@@ -10,7 +10,7 @@ output "course_plain" {
 
 ####### List Type (input) ########
 variable "course_list" {
-  default =[
+  default = [
     "Devops",
     "AWS",
     "Python"
