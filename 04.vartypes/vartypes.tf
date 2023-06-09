@@ -19,7 +19,7 @@ variable "course_list" {
 
 ######## Output #########
 output "course_list" {
-  value = var.course_list
+  value = var.course_list[2]
 }
 
 ####### Map Type (input) ########
@@ -41,7 +41,7 @@ variable "course_map" {
 
 ######## Output #########
 output "course_map" {
-  value = var.course_map["AWS"]
+  value = var.course_map
 }
 
 
