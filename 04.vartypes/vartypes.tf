@@ -41,7 +41,7 @@ variable "course_map" {
 
 ######## Output #########
 output "course_map" {
-  value = var.course_map
+  value = var.course_map["AWS"]
 }
 
 
