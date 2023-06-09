@@ -19,7 +19,7 @@ variable "course_list" {
 
 ######## Output #########
 output "course_list" {
-  value = var.course_list[2]
+  value = var.course_list[3]
 }
 
 ####### Map Type (input) ########
