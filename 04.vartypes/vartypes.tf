@@ -19,7 +19,7 @@ variable "course_list" {
 
 ######## Output #########
 output "course_list" {
-  value = var.course_list[0]
+  value = var.course_list  #### use this to filter only one details   value = var.course_list[2]
 }
 
 ####### Map Type (input) ########
@@ -41,7 +41,7 @@ variable "course_map" {
 
 ######## Output #########
 output "course_map" {
-  value = var.course_map
+  value = var.course_map   #### use this to filter only one details   value = var.course_map[“Devops”]
 }
 
 
