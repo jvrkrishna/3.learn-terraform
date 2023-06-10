@@ -7,3 +7,8 @@ module "sample2" {
   source = "./ec2"
   name = "sample2"
 }
+
+output "pubilc_ip_sample1" {
+  description = "Public IP address of the EC2 instance"
+  value = module.sample1.public_ip
+}
