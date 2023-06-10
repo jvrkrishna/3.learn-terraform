@@ -8,12 +8,12 @@ module "sample2" {
   name = "sample4"
 }
 
-#output "pubilc_ip_sample3" {
- # description = "Public IP address of the EC2 instance"
- # value = module.sample1.public_ip
-#}
+output "pubilc_ip_sample3" {
+  description = "Public IP address of the EC2 instance"
+  value = module.sample1.public_ip
+}
 
-#output "pubilc_ip_sample4" {
-#  description = "Public IP address of the EC2 instance"
-#  value = module.sample2.public_ip
-#}
+output "pubilc_ip_sample4" {
+  description = "Public IP address of the EC2 instance"
+  value = module.sample2.public_ip
+}
