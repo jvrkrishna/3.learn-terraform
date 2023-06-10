@@ -10,7 +10,7 @@ data "aws_ec2_spot_price" "example" {
 }
 
 output "price" {
-  value = data.aws_ec2_spot_price.example.id
+  value = data.aws_ec2_spot_price.example.spot_price
 }
 
 ###### aws security group datasource terraform #######
