@@ -21,3 +21,12 @@ data "aws_security_group" "selected" {
 output "sgid" {
   value = data.aws_security_group.selected.id
 }
+
+############ aws ami id datasource terraform #############
+data "aws_ami" "example" {
+  owners = ["973714476881"]
+}
+
+output "ami" {
+  name = data.aws_ami.example.id
+}
