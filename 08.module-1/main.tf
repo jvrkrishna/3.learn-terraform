@@ -8,6 +8,8 @@ module "sample2" {
   name = "sample4"
 }
 
+######### to print output ############
+
 output "pubilc_ip_sample3" {
   description = "Public IP address of the EC2 instance"
   value = module.sample1.public_ip

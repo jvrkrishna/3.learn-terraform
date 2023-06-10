@@ -44,6 +44,7 @@ resource "aws_security_group" "sg" {
 
 variable "name" {}
 
+############# to Print Output ##############
 output "public_ip" {
   value = aws_instance.web.public_ip
 }
