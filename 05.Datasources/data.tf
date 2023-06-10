@@ -9,6 +9,15 @@ data "aws_ec2_spot_price" "example" {
   }
 }
 
-output "prise" {
+output "price" {
   value = data.aws_ec2_spot_price.example.spot_price
+}
+
+###### aws security group datasource terraform #######
+data "aws_security_group" "selected" {
+  name = "allow-all"
+}
+
+output "sgid" {
+  value = data.aws_security_group.selected.id
 }
