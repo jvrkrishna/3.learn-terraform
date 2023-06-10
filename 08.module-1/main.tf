@@ -9,11 +9,9 @@ module "sample2" {
 }
 
 output "pubilc_ip_sample1" {
-  description = "Public IP address of the EC2 instance"
   value = module.sample1.public_ip
 }
 
 output "pubilc_ip_sample2" {
-  description = "Public IP address of the EC2 instance"
   value = module.sample2.public_ip
 }
