@@ -1,9 +1,16 @@
-module "sample1" {
+module "frontend" {
   source = "./ec2"
-  name = "sample1"
+  name = "frontend"
 }
 
-module "sample2" {
+module "mongodb" {
   source = "./ec2"
-  name = "sample2"
+  name = "mongodb"
 }
+
+module "catalogue" {
+  source = "./ec2"
+  name = "catalogue"
+}
+
+
