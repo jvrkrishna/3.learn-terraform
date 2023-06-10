@@ -28,5 +28,5 @@ data "aws_ami" "example" {
 }
 
 output "ami" {
-  name = data.aws_ami.example.id
+  value = data.aws_ami.example.id
 }
