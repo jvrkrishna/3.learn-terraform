@@ -21,12 +21,12 @@ output "courses_list" {
 ######### map type declaration #########
 variable "course" {
   default = {
-    course1 = {
-      name = "Devops"
+    Devops = {
+      topics = ["Devops","Jenkins"]
       time = "90days"
     }
-    course2 = {
-      name = "AWS"
+    AWS = {
+      topics = "cloud"
       timings = ["4h", "3hr"]
     }
   }
@@ -34,7 +34,7 @@ variable "course" {
 
 ######## To print the map output ###########
 output "couse_name" {
-  value = var.course["course2"]["timings"]
+  value = var.course["Devops"]["topics"]
 }
 
 ####### To lookup whether value is there or not #########
