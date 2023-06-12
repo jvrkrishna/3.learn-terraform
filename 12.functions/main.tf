@@ -33,6 +33,6 @@ variable "course" {
 }
 
 ######## To print the map output ###########
-output "couses" {
+output "couse_name" {
   value = var.course["course1"]["name"]
 }
