@@ -36,3 +36,8 @@ variable "course" {
 output "couse_name" {
   value = var.course["course2"]["timings"]
 }
+
+####### To lookup whether value is there or not #########
+output "course_name" {
+  value = lookup(var.course, "AWS", null)
+}
