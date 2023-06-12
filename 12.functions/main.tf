@@ -23,7 +23,7 @@ variable "course" {
   default = {
     Devops = {
       topics = ["Devops","Jenkins"]
-      time = "90days"
+      Duration = "90days"
     }
     AWS = {
       topics = "cloud"
@@ -43,5 +43,5 @@ output "course_lookup" {
 
 ####### To lookup whether value is there or not #########
 output "course_lookup1" {
-  value = lookup(lookup(var.course, "AWS", null), "topics","no topics assigned")
+  value = lookup(lookup(var.course, "AWS", null), "Duration","Duration not announced")
 }
