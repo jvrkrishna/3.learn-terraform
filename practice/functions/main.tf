@@ -11,7 +11,8 @@ variable "fruit_list" {
 }
 
 output "fruit_list" {
-  value = var.fruit_list[1]
+  value = element(var.fruit_list, index) ####var.fruit_list[1]
+
 }
 
 
