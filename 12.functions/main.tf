@@ -34,5 +34,5 @@ variable "course" {
 
 ######## To print the map output ###########
 output "couse_name" {
-  value = var.course["course2"]["name: timings"]
+  value = var.course["course2"]["timings"]
 }
