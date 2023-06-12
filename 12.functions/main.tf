@@ -38,6 +38,6 @@ output "couse_name" {
 }
 
 ####### To lookup whether value is there or not #########
-output "course_name" {
+output "course_lookup" {
   value = lookup(var.course, "AWS", null)
 }
