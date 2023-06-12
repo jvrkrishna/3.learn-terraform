@@ -3,6 +3,6 @@ variable "class" {
 }
 
 ###### print the same in Capital Letters ######
-output "calss" {
+output "class" {
   value = var.class
 }
