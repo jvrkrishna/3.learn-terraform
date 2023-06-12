@@ -33,5 +33,5 @@ variable "fruit_map" {
 }
 
 output "fruit_map" {
-  value = var.fruit_map.fruit1.color
+  value = lookup(var.fruit_map, "fruit1", "color")#####var.fruit_map.fruit1.color
 }
