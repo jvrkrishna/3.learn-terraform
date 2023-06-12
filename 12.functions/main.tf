@@ -40,3 +40,8 @@ output "couse_name" {
 output "course_lookup" {
   value = lookup(var.course, "AWS", null)
 }
+
+####### To lookup whether value is there or not #########
+output "course_lookup1" {
+  value = lookup(lookup(var.course, "AWS", null), "topics","no topics assigned")
+}
