@@ -4,5 +4,5 @@ variable "class" {
 
 ###### print the same in Capital Letters ######
 output "class" {
-  value = var.class
+  value = upper(var.class)
 }
