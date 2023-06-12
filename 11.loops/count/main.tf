@@ -5,7 +5,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.small"
 
   tags = {
-    Name = "Hellow world-${count.index}"
+    Name = var.instances[count.index]    ####### or also use element(var.instances, count.index)
   }
 }
 
