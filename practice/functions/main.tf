@@ -33,5 +33,5 @@ variable "fruit_map" {
 }
 
 output "fruit_map" {
-  value = lookup(lookup(var.fruit_map, "fruit3", null ), "color", null)
+  value = lookup(lookup(var.fruit_map, "fruit3", null ), color, null)
 }
