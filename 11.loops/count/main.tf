@@ -18,5 +18,5 @@ data "aws_ami" "example" {
 
 
 variable "instances" {
-  value = ["frontend", "mongodb", "catalogue"]
+  default = ["frontend", "mongodb", "catalogue"]
 }
