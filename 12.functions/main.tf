@@ -27,7 +27,6 @@ variable "course" {
     }
     AWS = {
       topics = "cloud"
-      timings = ["4h", "3hr"]
     }
   }
 }
