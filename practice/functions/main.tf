@@ -11,7 +11,7 @@ variable "fruit_list" {
 }
 
 output "fruit_list" {
-  value = length([var.fruit_list])#####element(var.fruit_list, 4) ####var.fruit_list[1]
+  value = length(var.fruit_list)#####element(var.fruit_list, 4) ####var.fruit_list[1]
 
 }
 
