@@ -23,7 +23,7 @@ variable "instances" {
       name = "frontend"
       instance_type = "t3.small"
     }
-    frontend = {
+    mongodb = {
       name = "mongodb"
     }
     catalogue = {
