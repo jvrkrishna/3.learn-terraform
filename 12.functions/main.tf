@@ -8,6 +8,7 @@ output "class" {
   value = upper(var.class)
 }
 
+##################################################################################################################################
 ######## List type declaration ###########
 variable "courses" {
   default = ["Devops", "Jenkins"]
@@ -17,7 +18,11 @@ variable "courses" {
 output "courses_list" {
   value = length(var.courses)
 }
+output "courses_lists" {
+  value = element(var.courses, 3) ####### 3 will itterate the list
+}
 
+##################################################################################################################################
 ######### map type declaration #########
 variable "course" {
   default = {
