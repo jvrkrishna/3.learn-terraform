@@ -14,12 +14,13 @@ variable "courses" {
   default = ["Devops", "Jenkins"]
 }
 
-###### print the count of list ##########
+###### print the count of list - No of items in the list##########
 output "courses_list" {
   value = length(var.courses)
 }
+
 output "courses_lists" {
-  value = element(var.courses, 3) ####### 3 will itterate the list
+  value = element(var.courses, 3) ####### 3 will itterate the list and answer is jenkins
 }
 
 #########################################################################################################################################
