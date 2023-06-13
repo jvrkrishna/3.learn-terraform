@@ -7,21 +7,21 @@ resource "aws_instance" "web" {
   tags = {
     Name = var.name
   }
-}
-provisioner "remote-exec" {
+  provisioner "remote-exec" {
 
-  connection {
-    type     = "ssh"
-    user     = "centos"
-    password = "DevOps321"
-    host     = aws_instance.web.public_ip
-  }
-   inline = [
+    connection {
+      type     = "ssh"
+      user     = "centos"
+      password = "DevOps321"
+      host     = aws_instance.web.public_ip
+    }
+    inline = [
       "sudo labauto ansible",
       "ansible-pull -i localhost, -U https://github.com/jvrkrishna/roboshopp-ansible roboshop.yml -e role_name=${var.name}"
     ]
-}
+  }
 
+}
 
 resource "aws_route53_record" "www" {
   zone_id = "Z0858447245XTBTK7DY06"
