@@ -1,16 +1,16 @@
 module "frontend" {
   source = "./ec2"
-  Name = "frontend"
+  name = "frontend"
 }
 
 module "mongodb" {
   source = "./ec2"
-  Name = "mongodb"
+  name = "mongodb"
 }
 
 module "catalogue" {
   source = "./ec2"
-  Name = "catalogue"
+  name = "catalogue"
 }
 
 
