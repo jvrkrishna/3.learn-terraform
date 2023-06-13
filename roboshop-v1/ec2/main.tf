@@ -1,4 +1,4 @@
-###### create ec2 instance terraform ######
+###### create ec2 instance terraform with vpc######
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.example.id
   instance_type          = "t3.small"
@@ -7,6 +7,11 @@ resource "aws_instance" "web" {
   tags = {
     Name = var.name
   }
+}
+
+################ creating provisioner with null resource ################
+resource "null_resource" "ansible" {
+  depends_on = [aws_instance.web, aws_route53_record.www]   #### depends on this will create after this tasks
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
@@ -20,7 +25,7 @@ resource "aws_instance" "web" {
     ]
   }
 }
-
+################# creating dns records #################
 resource "aws_route53_record" "www" {
   zone_id = "Z0858447245XTBTK7DY06"
   name    = "${var.name}-dev"

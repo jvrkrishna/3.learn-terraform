@@ -1,16 +1,22 @@
-module "frontend" {
+module "instances" {
+  for_each = var.instances
   source = "./ec2"
-  name = "frontend"
+  name = each.key
 }
 
-module "mongodb" {
-  source = "./ec2"
-  name = "mongodb"
-}
-
-module "catalogue" {
-  source = "./ec2"
-  name = "catalogue"
+variable "instances" {
+  default = {
+    frontend = {}
+    mongodb = {}
+    catalogue = {}
+    redis = {}
+    user = {}
+    cart = {}
+    mysql = {}
+    shipping = {}
+    rabbitmq = {}
+    payment = {}
+  }
 }
 
 
