@@ -7,6 +7,7 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
   }
+  ####### Provisioner is used to connect remote and configure the inline commands ###################
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
