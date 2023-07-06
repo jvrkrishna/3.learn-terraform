@@ -51,3 +51,21 @@ output "course_lookup" {
 output "course_lookup1" {
   value = lookup(lookup(var.course, "AWS", null), "Duration","Duration not announced")
 }
+
+################ Merging of two functions ############################
+variable "name" {
+  default = {
+    fruit_name = "apple"
+  }
+}
+
+variable "details" {
+  default = {
+    quantity = 100
+    rating = 3.4
+  }
+}
+
+output "fruit" {
+  value = merge(var.name, var.details)
+}
