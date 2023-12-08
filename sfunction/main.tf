@@ -12,5 +12,5 @@ variable "course" {
 
 ######## To print the map output ###########
 output "couse_name" {
-  value =lookup(lookup(var.course, "rama", null),"Duration","Duration not found")
+  value =lookup(lookup(var.course, "Devops", null),"Duration","Duration not found")
 }
