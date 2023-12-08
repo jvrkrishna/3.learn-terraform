@@ -12,5 +12,5 @@ variable "course" {
 
 ######## To print the map output ###########
 output "couse_name" {
-  value = var.course["Devops"]["topics"]
+  value = lookup(var.course, ["rama"], "null")
 }
