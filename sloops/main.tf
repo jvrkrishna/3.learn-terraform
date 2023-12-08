@@ -14,5 +14,5 @@ data "aws_ami" "example" {
 }
 
 variable "instance" {
-  name = "frontend"
+  default = "frontend"
 }
