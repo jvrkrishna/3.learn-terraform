@@ -1,6 +1,6 @@
 variable "s1" {
-  default = ["apple","banana"]
+  default = ["Hello World"]
 }
 output "s1" {
-  value = endswith(var.s1, "na")
+  value = endswith(var.s1, "world")
 }
