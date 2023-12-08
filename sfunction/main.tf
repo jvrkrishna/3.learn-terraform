@@ -1,3 +1,3 @@
 output "s1" {
-  value = ceil(5.1)
+  value = min(12, 54, 3)
 }
