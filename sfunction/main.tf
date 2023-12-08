@@ -1,3 +1,6 @@
+variable "sa" {
+  default = "rama"
+}
 output "s1" {
-  value = min(12, 54, 3)
+  value = upper(var.sa)
 }
