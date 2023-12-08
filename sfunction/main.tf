@@ -1,6 +1,6 @@
 variable "sa" {
-  default = "rama"
+  default = ["rama","krishna"]
 }
 output "s1" {
-  value = upper(var.sa)
+  value = length(var.sa)
 }
