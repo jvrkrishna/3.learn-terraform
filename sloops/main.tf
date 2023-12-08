@@ -1,12 +1,12 @@
 resource "aws_instance" "web" {
-  count = length(var.instance)
   ami           = data.aws_ami.example.id
   instance_type = "t2.micro"
 
   tags = {
-    Name = var.instance[count.index]
+    Name = var.instance
   }
 }
+
 
 data "aws_ami" "example" {
   most_recent = true
@@ -15,5 +15,5 @@ data "aws_ami" "example" {
 }
 
 variable "instance" {
-  default =["frontend", "mongodb", "catalogue"]
+  default = ["frontend","mongodb","catalogue"]
 }
