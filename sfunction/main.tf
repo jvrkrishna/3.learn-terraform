@@ -1,4 +1,3 @@
-
-output "instance" {
-  value = upper("rama")
+output "s1" {
+  value = join(separator, list)
 }
