@@ -1,16 +1,16 @@
-variable "course" {
+variable "name" {
   default = {
-    Devops = {
-      topics = ["Devops","Jenkins"]
-      Duration = "90days"
-    }
-    AWS = {
-      topics = "cloud"
-    }
+    fruit_name = "apple"
   }
 }
 
-######## To print the map output ###########
-output "couse_name" {
-  value =lookup(lookup(var.course, "Raam", "geetha"),"Duration","Duration not found")
+variable "details" {
+  default = {
+    quantity = 100
+    rating = 3.4
+  }
+}
+
+output "fruit" {
+  value = merge(var.name, var.details)
 }
