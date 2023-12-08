@@ -5,7 +5,7 @@ resource "aws_instance" "web" {
   instance_type = lookup(each.value, "instance_type", "t2.micro" )
 
   tags = {
-    Name = each.key
+    Name = lookup(each.key, "name", "Rk")
   }
 }
 
@@ -23,7 +23,6 @@ variable "instances" {
       name = "frontend"
     }
     catalogue = {
-      name = "catalogue"
       instance_type= "t3.small"
     }
     cart = {
